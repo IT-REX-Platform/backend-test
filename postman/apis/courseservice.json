@@ -1,0 +1,860 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "CourseService API documentation",
+        "version": "0.0.1",
+        "title": "CourseService API",
+        "contact": {},
+        "license": {
+            "name": "unlicensed"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/services/courseservice",
+    "tags": [
+        {
+            "name": "chapter-resource",
+            "description": "Chapter Resource"
+        },
+        {
+            "name": "course-resource",
+            "description": "Course Resource"
+        },
+        {
+            "name": "user-info-resource",
+            "description": "User Info Resource"
+        }
+    ],
+    "paths": {
+        "/api/chapters": {
+            "get": {
+                "tags": [
+                    "chapter-resource"
+                ],
+                "summary": "getAllChapters",
+                "operationId": "getAllChaptersUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ChapterDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "chapter-resource"
+                ],
+                "summary": "createChapter",
+                "operationId": "createChapterUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "chapterDTO",
+                        "description": "chapterDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "chapter-resource"
+                ],
+                "summary": "updateChapter",
+                "operationId": "updateChapterUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "chapterDTO",
+                        "description": "chapterDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "chapter-resource"
+                ],
+                "summary": "patchChapter",
+                "operationId": "patchChapterUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "chapterDTO",
+                        "description": "chapterDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/chapters/{id}": {
+            "get": {
+                "tags": [
+                    "chapter-resource"
+                ],
+                "summary": "getChapter",
+                "operationId": "getChapterUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ChapterDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "chapter-resource"
+                ],
+                "summary": "deleteChapter",
+                "operationId": "deleteChapterUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/courses": {
+            "get": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "getAllCourses",
+                "operationId": "getAllCoursesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "activeOnly",
+                        "in": "query",
+                        "description": "activeOnly",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "publishState",
+                        "in": "query",
+                        "description": "publishState",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CourseDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "createCourse",
+                "operationId": "createCourseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "courseDTO",
+                        "description": "courseDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "updateCourse",
+                "operationId": "updateCourseUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "courseDTO",
+                        "description": "courseDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "patchCourse",
+                "operationId": "patchCourseUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "courseDTO",
+                        "description": "courseDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/courses/published": {
+            "get": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "getAllPublishedCourses",
+                "operationId": "getAllPublishedCoursesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "activeOnly",
+                        "in": "query",
+                        "description": "activeOnly",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CourseDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/courses/user": {
+            "get": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "getUserCourses",
+                "operationId": "getUserCoursesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "activeOnly",
+                        "in": "query",
+                        "description": "activeOnly",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "publishState",
+                        "in": "query",
+                        "description": "publishState",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CourseDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/courses/{id}": {
+            "get": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "getCourse",
+                "operationId": "getCourseUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CourseDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "deleteCourse",
+                "operationId": "deleteCourseUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/courses/{id}/join": {
+            "post": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "joinCourse",
+                "operationId": "joinCourseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/courses/{id}/leave": {
+            "post": {
+                "tags": [
+                    "course-resource"
+                ],
+                "summary": "leaveCourse",
+                "operationId": "leaveCourseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/user-info": {
+            "get": {
+                "tags": [
+                    "user-info-resource"
+                ],
+                "summary": "getUserInfo",
+                "operationId": "getUserInfoUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/UserDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "ChapterDTO": {
+            "type": "object",
+            "properties": {
+                "contents": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "title": {
+                    "type": "string"
+                }
+            },
+            "title": "ChapterDTO"
+        },
+        "CourseDTO": {
+            "type": "object",
+            "properties": {
+                "chapters": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "courseDescription": {
+                    "type": "string"
+                },
+                "courseRole": {
+                    "type": "string",
+                    "enum": [
+                        "OWNER",
+                        "MANAGER",
+                        "PARTICIPANT"
+                    ]
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "maxFoodSum": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "publishState": {
+                    "type": "string",
+                    "enum": [
+                        "UNPUBLISHED",
+                        "PUBLISHED"
+                    ]
+                },
+                "remainActiveOffset": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "title": "CourseDTO"
+        },
+        "UserDTO": {
+            "type": "object",
+            "properties": {
+                "courses": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "email": {
+                    "type": "string"
+                },
+                "familyName": {
+                    "type": "string"
+                },
+                "givenName": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "rexRole": {
+                    "type": "string",
+                    "enum": [
+                        "ADMIN",
+                        "LECTURER",
+                        "STUDENT"
+                    ]
+                },
+                "userName": {
+                    "type": "string"
+                }
+            },
+            "title": "UserDTO"
+        }
+    }
+}

@@ -1,0 +1,596 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "MediaService API documentation",
+        "version": "0.0.1",
+        "title": "MediaService API",
+        "contact": {},
+        "license": {
+            "name": "unlicensed"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/services/mediaservice",
+    "tags": [
+        {
+            "name": "content-resource",
+            "description": "Content Resource"
+        },
+        {
+            "name": "video-resource",
+            "description": "Video Resource"
+        }
+    ],
+    "paths": {
+        "/api/content": {
+            "patch": {
+                "tags": [
+                    "content-resource"
+                ],
+                "summary": "patchContent",
+                "operationId": "patchContentUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "content",
+                        "description": "content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Content"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Content"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/videos": {
+            "get": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "getAllVideos",
+                "operationId": "getAllVideosUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "description": "course_id",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Video"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "uploadVideo",
+                "operationId": "uploadVideoUsingPOST",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "courseId",
+                        "description": "courseId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "flashAttributes",
+                        "in": "query",
+                        "required": false,
+                        "type": "object"
+                    },
+                    {
+                        "name": "videoFile",
+                        "in": "formData",
+                        "description": "videoFile",
+                        "required": true,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Video"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "patchVideo",
+                "operationId": "patchVideoUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "video",
+                        "description": "video",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Video"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Video"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/videos/{id}": {
+            "get": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "downloadVideo",
+                "operationId": "downloadVideoUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "deleteVideo",
+                "operationId": "deleteVideoUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "flashAttributes",
+                        "in": "query",
+                        "required": false,
+                        "type": "object"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "Content": {
+            "type": "object",
+            "properties": {
+                "chapterId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "uploaderId": {
+                    "type": "string",
+                    "format": "uuid"
+                }
+            },
+            "title": "Content"
+        },
+        "File": {
+            "type": "object",
+            "properties": {
+                "absolute": {
+                    "type": "boolean"
+                },
+                "absoluteFile": {
+                    "$ref": "#/definitions/File"
+                },
+                "absolutePath": {
+                    "type": "string"
+                },
+                "canonicalFile": {
+                    "$ref": "#/definitions/File"
+                },
+                "canonicalPath": {
+                    "type": "string"
+                },
+                "directory": {
+                    "type": "boolean"
+                },
+                "executable": {
+                    "type": "boolean"
+                },
+                "file": {
+                    "type": "boolean"
+                },
+                "freeSpace": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "hidden": {
+                    "type": "boolean"
+                },
+                "lastModified": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parent": {
+                    "type": "string"
+                },
+                "parentFile": {
+                    "$ref": "#/definitions/File"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "readable": {
+                    "type": "boolean"
+                },
+                "totalSpace": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "usableSpace": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "writable": {
+                    "type": "boolean"
+                }
+            },
+            "title": "File"
+        },
+        "InputStream": {
+            "type": "object",
+            "title": "InputStream"
+        },
+        "Resource": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "file": {
+                    "$ref": "#/definitions/File"
+                },
+                "filename": {
+                    "type": "string"
+                },
+                "inputStream": {
+                    "$ref": "#/definitions/InputStream"
+                },
+                "open": {
+                    "type": "boolean"
+                },
+                "readable": {
+                    "type": "boolean"
+                },
+                "uri": {
+                    "$ref": "#/definitions/URI"
+                },
+                "url": {
+                    "$ref": "#/definitions/URL"
+                }
+            },
+            "title": "Resource"
+        },
+        "URI": {
+            "type": "object",
+            "properties": {
+                "absolute": {
+                    "type": "boolean"
+                },
+                "authority": {
+                    "type": "string"
+                },
+                "fragment": {
+                    "type": "string"
+                },
+                "host": {
+                    "type": "string"
+                },
+                "opaque": {
+                    "type": "boolean"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "port": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "query": {
+                    "type": "string"
+                },
+                "rawAuthority": {
+                    "type": "string"
+                },
+                "rawFragment": {
+                    "type": "string"
+                },
+                "rawPath": {
+                    "type": "string"
+                },
+                "rawQuery": {
+                    "type": "string"
+                },
+                "rawSchemeSpecificPart": {
+                    "type": "string"
+                },
+                "rawUserInfo": {
+                    "type": "string"
+                },
+                "scheme": {
+                    "type": "string"
+                },
+                "schemeSpecificPart": {
+                    "type": "string"
+                },
+                "userInfo": {
+                    "type": "string"
+                }
+            },
+            "title": "URI"
+        },
+        "URL": {
+            "type": "object",
+            "properties": {
+                "authority": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "object"
+                },
+                "defaultPort": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "deserializedFields": {
+                    "$ref": "#/definitions/URLStreamHandler"
+                },
+                "file": {
+                    "type": "string"
+                },
+                "host": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "port": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "protocol": {
+                    "type": "string"
+                },
+                "query": {
+                    "type": "string"
+                },
+                "ref": {
+                    "type": "string"
+                },
+                "serializedHashCode": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "userInfo": {
+                    "type": "string"
+                }
+            },
+            "title": "URL"
+        },
+        "URLStreamHandler": {
+            "type": "object",
+            "title": "URLStreamHandler"
+        },
+        "Video": {
+            "type": "object",
+            "properties": {
+                "chapterId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "height": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "length": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "mimeType": {
+                    "type": "string",
+                    "enum": [
+                        "AUDIO_MPEG",
+                        "IMAGE_GIF",
+                        "IMAGE_JPEG",
+                        "IMAGE_PNG",
+                        "IMAGE_SVG",
+                        "VIDEO_MP4",
+                        "APPLICATION_PDF"
+                    ]
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "uploaderId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "width": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "Video"
+        }
+    }
+}

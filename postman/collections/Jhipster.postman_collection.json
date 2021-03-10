@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "1fdbae80-5846-4c43-8d46-e8f3f001cd8e",
+		"name": "Jhipster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "apis",
+			"item": [
+				{
+					"name": "jhipster-registry API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jhipster-registry}}/v2/api-docs",
+							"host": [
+								"{{jhipster-registry}}"
+							],
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gateway API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway}}/v2/api-docs",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CourseService API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{courseservice}}/v2/api-docs",
+							"host": [
+								"{{courseservice}}"
+							],
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MediaService API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mediaservice}}/v2/api-docs",
+							"host": [
+								"{{mediaservice}}"
+							],
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "{{scope}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{tokenurl}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{authurl}}",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "{{callbackurl}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "keycloak-bearer-token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "clientId",
+			"value": "jhipster-registry"
+		}
+	]
+}

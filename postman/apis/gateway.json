@@ -1,0 +1,267 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Gateway API documentation",
+        "version": "0.0.1",
+        "title": "Gateway API",
+        "contact": {},
+        "license": {
+            "name": "unlicensed"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "auth-info-resource",
+            "description": "Auth Info Resource"
+        },
+        {
+            "name": "gateway-resource",
+            "description": "Gateway Resource"
+        },
+        {
+            "name": "logout-resource",
+            "description": "Logout Resource"
+        }
+    ],
+    "paths": {
+        "/api/auth-info": {
+            "get": {
+                "tags": [
+                    "auth-info-resource"
+                ],
+                "summary": "getAuthInfo",
+                "operationId": "getAuthInfoUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/AuthInfoVM"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/gateway/routes": {
+            "get": {
+                "tags": [
+                    "gateway-resource"
+                ],
+                "summary": "activeRoutes",
+                "operationId": "activeRoutesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RouteVM"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/logout": {
+            "post": {
+                "tags": [
+                    "logout-resource"
+                ],
+                "summary": "logout",
+                "operationId": "logoutUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "claims",
+                        "in": "query",
+                        "required": false,
+                        "type": "object"
+                    },
+                    {
+                        "name": "tokenValue",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "AuthInfoVM": {
+            "type": "object",
+            "properties": {
+                "clientId": {
+                    "type": "string"
+                },
+                "issuer": {
+                    "type": "string"
+                }
+            },
+            "title": "AuthInfoVM"
+        },
+        "RouteVM": {
+            "type": "object",
+            "properties": {
+                "path": {
+                    "type": "string"
+                },
+                "serviceId": {
+                    "type": "string"
+                },
+                "serviceInstances": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceInstance"
+                    }
+                }
+            },
+            "title": "RouteVM"
+        },
+        "ServiceInstance": {
+            "type": "object",
+            "properties": {
+                "host": {
+                    "type": "string"
+                },
+                "instanceId": {
+                    "type": "string"
+                },
+                "metadata": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "port": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "scheme": {
+                    "type": "string"
+                },
+                "secure": {
+                    "type": "boolean"
+                },
+                "serviceId": {
+                    "type": "string"
+                },
+                "uri": {
+                    "$ref": "#/definitions/URI"
+                }
+            },
+            "title": "ServiceInstance"
+        },
+        "URI": {
+            "type": "object",
+            "properties": {
+                "absolute": {
+                    "type": "boolean"
+                },
+                "authority": {
+                    "type": "string"
+                },
+                "fragment": {
+                    "type": "string"
+                },
+                "host": {
+                    "type": "string"
+                },
+                "opaque": {
+                    "type": "boolean"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "port": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "query": {
+                    "type": "string"
+                },
+                "rawAuthority": {
+                    "type": "string"
+                },
+                "rawFragment": {
+                    "type": "string"
+                },
+                "rawPath": {
+                    "type": "string"
+                },
+                "rawQuery": {
+                    "type": "string"
+                },
+                "rawSchemeSpecificPart": {
+                    "type": "string"
+                },
+                "rawUserInfo": {
+                    "type": "string"
+                },
+                "scheme": {
+                    "type": "string"
+                },
+                "schemeSpecificPart": {
+                    "type": "string"
+                },
+                "userInfo": {
+                    "type": "string"
+                }
+            },
+            "title": "URI"
+        }
+    }
+}

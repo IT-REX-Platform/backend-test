@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "b4f5b9d0-ed74-4d28-918a-3a3cfb430c2e",
+		"name": "Keycloak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "oidc",
+			"item": [
+				{
+					"name": "config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{keycloak}}/auth/realms/{{realm}}/.well-known/openid-configuration",
+							"host": [
+								"{{keycloak}}"
+							],
+							"path": [
+								"auth",
+								"realms",
+								"{{realm}}",
+								".well-known",
+								"openid-configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userinfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/userinfo",
+							"host": [
+								"{{keycloak}}"
+							],
+							"path": [
+								"auth",
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"userinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/logout",
+							"host": [
+								"{{keycloak}}"
+							],
+							"path": [
+								"auth",
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "certs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/certs",
+							"host": [
+								"{{keycloak}}"
+							],
+							"path": [
+								"auth",
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"certs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "introspect",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "internal",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "internal",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4ODE0NWNhNi03MzRhLTQ5NzItOTg4MS1jOGExN2Q3YWE5MTIifQ.eyJleHAiOjE2MTUzNjk2MDcsImlhdCI6MTYxNTM2NzgwNywianRpIjoiNGMyYzM0ODItMzAzMS00MTBjLTk5NDgtZjRlY2VmYTE2NzQ2IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjkwODAvYXV0aC9yZWFsbXMvbWFzdGVyIiwiYXVkIjoiaHR0cDovL2tleWNsb2FrOjkwODAvYXV0aC9yZWFsbXMvbWFzdGVyIiwic3ViIjoiMDFmM2RiNjMtZTMzZS00ZjNlLTkwOTYtZDFlN2YyMzEwZTMxIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6ImFkbWluLWNsaSIsInNlc3Npb25fc3RhdGUiOiJlYTYwMjE0My0xMWU5LTRjMTMtOTE4Ny02Y2QxMGU0YjFhYzUiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUifQ.U3FiYZaMESYbQrveO47KFREXjZMkkej78ZwIPgwXsfs",
+									"type": "text"
+								},
+								{
+									"key": "token_type_hint",
+									"value": "access_token",
+									"type": "text"
+								},
+								{
+									"key": "token_type_hint",
+									"value": "requesting_party_token",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/token/introspect",
+							"host": [
+								"{{keycloak}}"
+							],
+							"path": [
+								"auth",
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"token",
+								"introspect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "revoke",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "internal",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "internal",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGX2E0QXVLazR5Rkl0cW94V0RHUmVoT3ZRZkZyN1h3TWpKSDRBVUdhMzBRIn0.eyJleHAiOjE2MTUzNjc2MTYsImlhdCI6MTYxNTM2NzU1NiwianRpIjoiM2U4OTU2M2ItOTk0ZC00YzlmLTk0ZWUtYWNmYjViNGZjN2E3IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjkwODAvYXV0aC9yZWFsbXMvbWFzdGVyIiwic3ViIjoiMDFmM2RiNjMtZTMzZS00ZjNlLTkwOTYtZDFlN2YyMzEwZTMxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwic2Vzc2lvbl9zdGF0ZSI6IjVjYTY5MjJlLTUzY2ItNDI5Yi1iNDFmLWFiOWVhMjU2YjNmYSIsImFjciI6IjEiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIn0.bq0h6qJ_amlX8rQUKYPInArfCNw01KsPm4B0AAaJbKw1la0aDDc2fKIelZVAT6DZUsjADHCFBeoT5fcUSyA7Neu_htSBhrUASlwZErUwjDD-3uXzGZkbJ0eX7qiykQ4VUGnTpY8mRe0V1njHDPgp-LL4h7zUeJUcvOHtchhSlsjDCTdkuf5Sef6ayBjfVA99KC1jvDi_Gr6uH3nhEgmU97kxeREZ7_-QfKPWrc6WswX3T3KJyONZSoJKUEXIGn01VNc7z8YtPiY3kr001G_wRC2sIQpjiyWTUUe8z__8l9ACOrIYjQTB4St2BYnLyAPJKhO4HHXrSPAI3dyTsqRfpw",
+									"type": "text"
+								},
+								{
+									"key": "token_type_hint",
+									"value": "access_token",
+									"type": "text"
+								},
+								{
+									"key": "token_type_hint",
+									"value": "refresh_token",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/revoke",
+							"host": [
+								"{{keycloak}}"
+							],
+							"path": [
+								"auth",
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getToken admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "admin-cli",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{keycloak}}/auth/realms/master/protocol/openid-connect/token",
+					"host": [
+						"{{keycloak}}"
+					],
+					"path": [
+						"auth",
+						"realms",
+						"master",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToken internal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "internal",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "internal",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/token",
+					"host": [
+						"{{keycloak}}"
+					],
+					"path": [
+						"auth",
+						"realms",
+						"{{realm}}",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authn lecturer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "{{clientId}}",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "lecturer",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "lecturer",
+							"type": "text"
+						},
+						{
+							"key": "response_type",
+							"value": "code",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{authurl}}",
+					"host": [
+						"{{authurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get OIDC gateway config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{gateway}}/api/auth-info",
+					"host": [
+						"{{gateway}}"
+					],
+					"path": [
+						"api",
+						"auth-info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "redirect_uri",
+				"value": "{{callbackurl}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{authurl}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{tokenurl}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "{{scope}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "keycloak-bearer-token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "clientId",
+			"value": "web_app"
+		}
+	]
+}
