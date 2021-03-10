@@ -3196,11 +3196,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "localhost:8080/services/courseservice"
-		},
-		{
-			"key": "clientId",
-			"value": "web_app"
+			"value": "{{courseservice}}"
 		}
 	]
 }
