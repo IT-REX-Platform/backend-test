@@ -53,9 +53,27 @@
 				},
 				{
 					"name": "logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{clientId}}",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhZmI5ZTE4Yy1iNDVkLTQwZDctYTk3OS0xYTRkMDgwYjI5NzYifQ.eyJleHAiOjE2MTYyNTU3MzYsImlhdCI6MTYxNjI1MzkzNiwianRpIjoiNzk5ZDdmOTEtMWI4Mi00ZWQ0LTlhODAtYTUxZTNjNTJkYzdkIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjkwODAvYXV0aC9yZWFsbXMvamhpcHN0ZXIiLCJhdWQiOiJodHRwOi8va2V5Y2xvYWs6OTA4MC9hdXRoL3JlYWxtcy9qaGlwc3RlciIsInN1YiI6IjhmZmRmYTAwLWQwN2MtNGMzZi1iYWNhLWQ3NDRmNGFkODFkOSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJ3ZWJfYXBwIiwic2Vzc2lvbl9zdGF0ZSI6IjQ1NTE5N2JiLTI1YTItNDJiOC1iNjkxLTI2YzlmMDU4YzI3OCIsInNjb3BlIjoiamhpcHN0ZXIgZW1haWwgcHJvZmlsZSJ9.WrcwxDeEGQ-sgGTjqRmrAs_swA7b90BHD1oS-ZKfU-4",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
 							"raw": "{{keycloak}}/auth/realms/{{realm}}/protocol/openid-connect/logout",
 							"host": [
@@ -433,12 +451,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "clientId",
-			"value": "web_app"
 		}
 	]
 }
