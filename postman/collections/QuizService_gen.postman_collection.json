@@ -1,0 +1,2094 @@
+{
+	"info": {
+		"_postman_id": "73c74511-bc80-4199-8172-34f08bbf43a2",
+		"name": "QuizService_gen",
+		"description": "QuizService API documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "questions",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "getQuestion",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7d4b2328-cffa-046e-cd64-cb1502b55479",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "deleteQuestion",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7d4b2328-cffa-046e-cd64-cb1502b55479",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/questions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"questions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "getCourseQuestions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/questions?course_id=do dolor laborum",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"questions"
+									],
+									"query": [
+										{
+											"key": "course_id",
+											"value": "do dolor laborum",
+											"description": "(Required) course_id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions?course_id=do dolor laborum",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "do dolor laborum"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions?course_id=do dolor laborum",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "do dolor laborum"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions?course_id=do dolor laborum",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "do dolor laborum"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions?course_id=do dolor laborum",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "do dolor laborum"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "createQuestion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"urn:uuid:43636067-2fd5-7a87-de22-e51252374345\",\n    \"id\": \"urn:uuid:d6d1e4aa-25ee-245e-ad8b-a46d6dd826d9\",\n    \"question\": \"ex elit aliqua cupidatat proident\",\n    \"quizIds\": [\n        \"urn:uuid:ef4508b6-0988-e541-3a8e-a65a82963601\",\n        \"6b8ab6a4-4910-2c8b-3a78-ebeed5012db1\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/questions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"questions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "updateQuestion",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"urn:uuid:43636067-2fd5-7a87-de22-e51252374345\",\n    \"id\": \"urn:uuid:d6d1e4aa-25ee-245e-ad8b-a46d6dd826d9\",\n    \"question\": \"ex elit aliqua cupidatat proident\",\n    \"quizIds\": [\n        \"urn:uuid:ef4508b6-0988-e541-3a8e-a65a82963601\",\n        \"6b8ab6a4-4910-2c8b-3a78-ebeed5012db1\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/questions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"questions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/questions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "findAllByIds",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"urn:uuid:0fbc084d-4f3c-b3a2-7d91-54743fe73aca\",\n    \"2afb302e-a580-952a-8ed8-4ff77d743431\"\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/questions/get/ids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"questions",
+										"get",
+										"ids"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/questions/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"questions",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "quizzes",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "getQuiz",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7d4b2328-cffa-046e-cd64-cb1502b55479",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "deleteQuiz",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/:id?with_questions=false",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												":id"
+											],
+											"query": [
+												{
+													"key": "with_questions",
+													"value": "false",
+													"description": "with_questions"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7d4b2328-cffa-046e-cd64-cb1502b55479",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id?with_questions=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"query": [
+														{
+															"key": "with_questions",
+															"value": "false"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id?with_questions=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"query": [
+														{
+															"key": "with_questions",
+															"value": "false"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id?with_questions=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"query": [
+														{
+															"key": "with_questions",
+															"value": "false"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/quizzes/:id?with_questions=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"quizzes",
+														":id"
+													],
+													"query": [
+														{
+															"key": "with_questions",
+															"value": "false"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "getAllQuizzes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/quizzes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "createQuiz",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"urn:uuid:5bd4f984-6a5b-2777-887f-32518872ac9d\",\n    \"id\": \"urn:uuid:26bc04fa-a247-6ac9-f32c-cc6feb8b48c8\",\n    \"name\": \"sit eu\",\n    \"questions\": [\n        {\n            \"courseId\": \"4ec19819-b629-06f5-bbc0-162a73d930cb\",\n            \"id\": \"urn:uuid:28fb99dd-adc4-8a29-2c15-93c7a584862f\",\n            \"question\": \"anim\",\n            \"quizIds\": [\n                \"urn:uuid:083f8cfc-9b38-1432-91e6-1049e94766e5\",\n                \"b8d79d8d-1433-ef23-641c-7332e96a4f2a\"\n            ]\n        },\n        {\n            \"courseId\": \"045d89f6-5064-8ca6-066f-4782bcc9af3b\",\n            \"id\": \"urn:uuid:f63a4a2f-a7d1-774c-d0c4-daca485acf08\",\n            \"question\": \"eiusmod ipsum nisi consequat\",\n            \"quizIds\": [\n                \"3c82bbc2-3667-a5dd-46ad-7f030401851b\",\n                \"urn:uuid:5924e3ce-c4f8-82d2-2d2c-1c386d9e14dd\"\n            ]\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/quizzes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "updateQuiz",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseId\": \"urn:uuid:5bd4f984-6a5b-2777-887f-32518872ac9d\",\n    \"id\": \"urn:uuid:26bc04fa-a247-6ac9-f32c-cc6feb8b48c8\",\n    \"name\": \"sit eu\",\n    \"questions\": [\n        {\n            \"courseId\": \"4ec19819-b629-06f5-bbc0-162a73d930cb\",\n            \"id\": \"urn:uuid:28fb99dd-adc4-8a29-2c15-93c7a584862f\",\n            \"question\": \"anim\",\n            \"quizIds\": [\n                \"urn:uuid:083f8cfc-9b38-1432-91e6-1049e94766e5\",\n                \"b8d79d8d-1433-ef23-641c-7332e96a4f2a\"\n            ]\n        },\n        {\n            \"courseId\": \"045d89f6-5064-8ca6-066f-4782bcc9af3b\",\n            \"id\": \"urn:uuid:f63a4a2f-a7d1-774c-d0c4-daca485acf08\",\n            \"question\": \"eiusmod ipsum nisi consequat\",\n            \"quizIds\": [\n                \"3c82bbc2-3667-a5dd-46ad-7f030401851b\",\n                \"urn:uuid:5924e3ce-c4f8-82d2-2d2c-1c386d9e14dd\"\n            ]\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/quizzes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "findAllByIds",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"urn:uuid:0fbc084d-4f3c-b3a2-7d91-54743fe73aca\",\n    \"2afb302e-a580-952a-8ed8-4ff77d743431\"\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/quizzes/get/ids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"quizzes",
+										"get",
+										"ids"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:27b3feca-6ed8-8140-197f-18ea200ed19c\",\n    \"urn:uuid:b296771b-4dcb-b42b-8c41-409c48712c77\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/quizzes/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"quizzes",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:8080/services/quizservice",
+			"type": "string"
+		}
+	]
+}

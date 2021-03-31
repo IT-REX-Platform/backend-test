@@ -1,0 +1,1403 @@
+{
+	"info": {
+		"_postman_id": "734409da-9407-4af0-a241-f584dd21edbe",
+		"name": "MediaService_gen",
+		"description": "MediaService API documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "videos",
+					"item": [
+						{
+							"name": "uploadVideo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "courseId",
+											"value": "laboris dolor",
+											"description": "(Required) courseId",
+											"type": "text"
+										},
+										{
+											"key": "videoFile",
+											"value": "mollit irure sunt",
+											"description": "(Required) videoFile",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/videos?flashAttributes=irure",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos"
+									],
+									"query": [
+										{
+											"key": "flashAttributes",
+											"value": "irure"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "courseId",
+													"value": "laboris dolor",
+													"description": {
+														"content": "(Required) courseId",
+														"type": "text/plain"
+													},
+													"type": "text"
+												},
+												{
+													"key": "videoFile",
+													"value": "mollit irure sunt",
+													"description": {
+														"content": "(Required) videoFile",
+														"type": "text/plain"
+													},
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "courseId",
+													"value": "laboris dolor",
+													"description": {
+														"content": "(Required) courseId",
+														"type": "text/plain"
+													},
+													"type": "text"
+												},
+												{
+													"key": "videoFile",
+													"value": "mollit irure sunt",
+													"description": {
+														"content": "(Required) videoFile",
+														"type": "text/plain"
+													},
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "courseId",
+													"value": "laboris dolor",
+													"description": {
+														"content": "(Required) courseId",
+														"type": "text/plain"
+													},
+													"type": "text"
+												},
+												{
+													"key": "videoFile",
+													"value": "mollit irure sunt",
+													"description": {
+														"content": "(Required) videoFile",
+														"type": "text/plain"
+													},
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "courseId",
+													"value": "laboris dolor",
+													"description": {
+														"content": "(Required) courseId",
+														"type": "text/plain"
+													},
+													"type": "text"
+												},
+												{
+													"key": "videoFile",
+													"value": "mollit irure sunt",
+													"description": {
+														"content": "(Required) videoFile",
+														"type": "text/plain"
+													},
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "courseId",
+													"value": "laboris dolor",
+													"description": {
+														"content": "(Required) courseId",
+														"type": "text/plain"
+													},
+													"type": "text"
+												},
+												{
+													"key": "videoFile",
+													"value": "mollit irure sunt",
+													"description": {
+														"content": "(Required) videoFile",
+														"type": "text/plain"
+													},
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "patchVideo",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"091cba96-518d-fc80-a8b6-9503e4ba85cd\",\n    \"courseId\": \"urn:uuid:0ce2ef93-84c5-d2dd-f58a-cb24019c9c83\",\n    \"endDate\": \"1988-11-18\",\n    \"height\": 73282147,\n    \"id\": \"e1ad8846-cc72-af1b-b14d-866ddd7c9e6b\",\n    \"length\": 74567373,\n    \"mimeType\": \"IMAGE_GIF\",\n    \"startDate\": \"1978-03-21\",\n    \"title\": \"minim velit\",\n    \"uploaderId\": \"urn:uuid:01840469-88cc-c362-48f2-a9a4b5a6ba88\",\n    \"width\": 89341552\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"chapterId\": \"091cba96-518d-fc80-a8b6-9503e4ba85cd\",\n    \"courseId\": \"urn:uuid:0ce2ef93-84c5-d2dd-f58a-cb24019c9c83\",\n    \"endDate\": \"1988-11-18\",\n    \"height\": 73282147,\n    \"id\": \"e1ad8846-cc72-af1b-b14d-866ddd7c9e6b\",\n    \"length\": 74567373,\n    \"mimeType\": \"IMAGE_GIF\",\n    \"startDate\": \"1978-03-21\",\n    \"title\": \"minim velit\",\n    \"uploaderId\": \"urn:uuid:01840469-88cc-c362-48f2-a9a4b5a6ba88\",\n    \"width\": 89341552\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"chapterId\": \"091cba96-518d-fc80-a8b6-9503e4ba85cd\",\n    \"courseId\": \"urn:uuid:0ce2ef93-84c5-d2dd-f58a-cb24019c9c83\",\n    \"endDate\": \"1988-11-18\",\n    \"height\": 73282147,\n    \"id\": \"e1ad8846-cc72-af1b-b14d-866ddd7c9e6b\",\n    \"length\": 74567373,\n    \"mimeType\": \"IMAGE_GIF\",\n    \"startDate\": \"1978-03-21\",\n    \"title\": \"minim velit\",\n    \"uploaderId\": \"urn:uuid:01840469-88cc-c362-48f2-a9a4b5a6ba88\",\n    \"width\": 89341552\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"chapterId\": \"091cba96-518d-fc80-a8b6-9503e4ba85cd\",\n    \"courseId\": \"urn:uuid:0ce2ef93-84c5-d2dd-f58a-cb24019c9c83\",\n    \"endDate\": \"1988-11-18\",\n    \"height\": 73282147,\n    \"id\": \"e1ad8846-cc72-af1b-b14d-866ddd7c9e6b\",\n    \"length\": 74567373,\n    \"mimeType\": \"IMAGE_GIF\",\n    \"startDate\": \"1978-03-21\",\n    \"title\": \"minim velit\",\n    \"uploaderId\": \"urn:uuid:01840469-88cc-c362-48f2-a9a4b5a6ba88\",\n    \"width\": 89341552\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"chapterId\": \"091cba96-518d-fc80-a8b6-9503e4ba85cd\",\n    \"courseId\": \"urn:uuid:0ce2ef93-84c5-d2dd-f58a-cb24019c9c83\",\n    \"endDate\": \"1988-11-18\",\n    \"height\": 73282147,\n    \"id\": \"e1ad8846-cc72-af1b-b14d-866ddd7c9e6b\",\n    \"length\": 74567373,\n    \"mimeType\": \"IMAGE_GIF\",\n    \"startDate\": \"1978-03-21\",\n    \"title\": \"minim velit\",\n    \"uploaderId\": \"urn:uuid:01840469-88cc-c362-48f2-a9a4b5a6ba88\",\n    \"width\": 89341552\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "findAllVideosOfACourse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/videos/course/:courseId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos",
+										"course",
+										":courseId"
+									],
+									"variable": [
+										{
+											"key": "courseId",
+											"value": "91ee9707-d0cd-d122-f765-addc26240777",
+											"type": "string",
+											"description": "(Required) courseId"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/course/:courseId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"course",
+												":courseId"
+											],
+											"variable": [
+												{
+													"key": "courseId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/course/:courseId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"course",
+												":courseId"
+											],
+											"variable": [
+												{
+													"key": "courseId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/course/:courseId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"course",
+												":courseId"
+											],
+											"variable": [
+												{
+													"key": "courseId"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/course/:courseId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"course",
+												":courseId"
+											],
+											"variable": [
+												{
+													"key": "courseId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "downloadVideo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/videos/download/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos",
+										"download",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "91ee9707-d0cd-d122-f765-addc26240777",
+											"type": "string",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/download/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"download",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/download/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"download",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/download/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"download",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/download/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"download",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "findAllWithIds",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"urn:uuid:046a8953-1833-e8b9-ff30-19e077b69d92\",\n    \"2375eb91-e30a-8074-7aab-ca4ec4732fd3\"\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/videos/get/ids",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos",
+										"get",
+										"ids"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:bfa7a2a2-10cc-bd30-6532-69146a83dc4c\",\n    \"urn:uuid:042d7019-0b0f-5dc3-955f-1f4b3f28ea4b\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:bfa7a2a2-10cc-bd30-6532-69146a83dc4c\",\n    \"urn:uuid:042d7019-0b0f-5dc3-955f-1f4b3f28ea4b\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:bfa7a2a2-10cc-bd30-6532-69146a83dc4c\",\n    \"urn:uuid:042d7019-0b0f-5dc3-955f-1f4b3f28ea4b\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:bfa7a2a2-10cc-bd30-6532-69146a83dc4c\",\n    \"urn:uuid:042d7019-0b0f-5dc3-955f-1f4b3f28ea4b\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    \"urn:uuid:bfa7a2a2-10cc-bd30-6532-69146a83dc4c\",\n    \"urn:uuid:042d7019-0b0f-5dc3-955f-1f4b3f28ea4b\"\n]"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/get/ids",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"get",
+												"ids"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "deleteVideo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/videos/:id?flashAttributes=irure",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos",
+										":id"
+									],
+									"query": [
+										{
+											"key": "flashAttributes",
+											"value": "irure"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "91ee9707-d0cd-d122-f765-addc26240777",
+											"type": "string",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id?flashAttributes=irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id"
+											],
+											"query": [
+												{
+													"key": "flashAttributes",
+													"value": "irure"
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "patchContent",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chapterId\": \"9a78e7cd-280e-27c7-314b-a85a9b784bd2\",\n    \"courseId\": \"7e66dbfb-78bb-0882-28e0-65d6b9c9bf74\",\n    \"endDate\": \"1998-05-20\",\n    \"id\": \"4303a225-395c-339c-e69f-e34503f0237e\",\n    \"startDate\": \"1998-09-25\",\n    \"title\": \"occaeca\",\n    \"uploaderId\": \"urn:uuid:722d7c39-f81a-34c8-cf3b-e85513a92211\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"content"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"9a78e7cd-280e-27c7-314b-a85a9b784bd2\",\n    \"courseId\": \"7e66dbfb-78bb-0882-28e0-65d6b9c9bf74\",\n    \"endDate\": \"1998-05-20\",\n    \"id\": \"4303a225-395c-339c-e69f-e34503f0237e\",\n    \"startDate\": \"1998-09-25\",\n    \"title\": \"occaeca\",\n    \"uploaderId\": \"urn:uuid:722d7c39-f81a-34c8-cf3b-e85513a92211\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"content"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"9a78e7cd-280e-27c7-314b-a85a9b784bd2\",\n    \"courseId\": \"7e66dbfb-78bb-0882-28e0-65d6b9c9bf74\",\n    \"endDate\": \"1998-05-20\",\n    \"id\": \"4303a225-395c-339c-e69f-e34503f0237e\",\n    \"startDate\": \"1998-09-25\",\n    \"title\": \"occaeca\",\n    \"uploaderId\": \"urn:uuid:722d7c39-f81a-34c8-cf3b-e85513a92211\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"content"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"9a78e7cd-280e-27c7-314b-a85a9b784bd2\",\n    \"courseId\": \"7e66dbfb-78bb-0882-28e0-65d6b9c9bf74\",\n    \"endDate\": \"1998-05-20\",\n    \"id\": \"4303a225-395c-339c-e69f-e34503f0237e\",\n    \"startDate\": \"1998-09-25\",\n    \"title\": \"occaeca\",\n    \"uploaderId\": \"urn:uuid:722d7c39-f81a-34c8-cf3b-e85513a92211\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"content"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"9a78e7cd-280e-27c7-314b-a85a9b784bd2\",\n    \"courseId\": \"7e66dbfb-78bb-0882-28e0-65d6b9c9bf74\",\n    \"endDate\": \"1998-05-20\",\n    \"id\": \"4303a225-395c-339c-e69f-e34503f0237e\",\n    \"startDate\": \"1998-09-25\",\n    \"title\": \"occaeca\",\n    \"uploaderId\": \"urn:uuid:722d7c39-f81a-34c8-cf3b-e85513a92211\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"content"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:8080/services/mediaservice",
+			"type": "string"
+		}
+	]
+}

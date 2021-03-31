@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1208350c-eda8-4f8b-adb3-355248f1799b",
+		"_postman_id": "24004d12-4cb0-440c-ae83-aaab42c95e28",
 		"name": "CourseService_gen",
 		"description": "CourseService API documentation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -33,7 +33,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "8ec17fc6-1d8d-64e9-e2f0-3d2872c4e2fd",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
 													"type": "string",
 													"description": "(Required) id"
 												}
@@ -42,7 +42,7 @@
 									},
 									"response": [
 										{
-											"name": "Not Found",
+											"name": "Forbidden",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -63,8 +63,42 @@
 													]
 												}
 											},
-											"status": "Not Found",
-											"code": 404,
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/chapters/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"chapters",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -110,7 +144,7 @@
 											"body": ""
 										},
 										{
-											"name": "Unauthorized",
+											"name": "Not Found",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -131,42 +165,8 @@
 													]
 												}
 											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
-										{
-											"name": "Forbidden",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/chapters/:id",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"chapters",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Forbidden",
-											"code": 403,
+											"status": "Not Found",
+											"code": 404,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -197,7 +197,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "8ec17fc6-1d8d-64e9-e2f0-3d2872c4e2fd",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
 													"type": "string",
 													"description": "(Required) id"
 												}
@@ -205,40 +205,6 @@
 										}
 									},
 									"response": [
-										{
-											"name": "No Content",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/chapters/:id",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"chapters",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "No Content",
-											"code": 204,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
 										{
 											"name": "Forbidden",
 											"originalRequest": {
@@ -297,6 +263,40 @@
 											},
 											"status": "OK",
 											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/chapters/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"chapters",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -363,7 +363,7 @@
 							},
 							"response": [
 								{
-									"name": "Not Found",
+									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -378,13 +378,13 @@
 											]
 										}
 									},
-									"status": "Not Found",
-									"code": 404,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "text/plain"
+											"value": "*/*"
 										}
 									],
 									"cookie": [],
@@ -419,34 +419,6 @@
 									"body": ""
 								},
 								{
-									"name": "OK",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
 									"name": "Unauthorized",
 									"originalRequest": {
 										"method": "GET",
@@ -464,6 +436,34 @@
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/chapters",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"chapters"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -488,7 +488,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"contents\": [\n        \"9146d44c-b20f-d5ab-4cc6-91e90e1bfcc3\",\n        \"urn:uuid:dffa3245-959e-6bf7-7844-462c9f36cb3f\"\n    ],\n    \"courseId\": \"92a06d64-ff27-d491-e6d4-2fe741a55822\",\n    \"endDate\": \"2007-08-06\",\n    \"id\": \"urn:uuid:7107ac92-030b-0003-f00e-6f98f5af79a8\",\n    \"startDate\": \"1943-02-23\",\n    \"title\": \"in\"\n}"
+									"raw": "{\n    \"chapterNumber\": -27074565,\n    \"contentReferences\": [\n        {\n            \"chapterId\": \"9f12a2cc-cf7d-ced4-f885-1e56c2d73462\",\n            \"contentId\": \"urn:uuid:c6832303-3204-9135-2abc-6380b8f72092\",\n            \"contentReferenceType\": \"QUIZ\",\n            \"id\": \"a4d44d13-c08d-16d9-d1b8-eb833780b31a\",\n            \"timePeriodId\": \"bda010fb-561f-5f8a-7661-1c7ad475886a\"\n        },\n        {\n            \"chapterId\": \"urn:uuid:d7f6b91a-ca31-91aa-9e25-35d0d56e2419\",\n            \"contentId\": \"58e6ccef-6ea5-a065-9274-ad07b0025094\",\n            \"contentReferenceType\": \"QUIZ\",\n            \"id\": \"078c6ec7-f430-a25d-3a60-22bdea66c696\",\n            \"timePeriodId\": \"4d47bd18-9c81-8054-30df-4a858bedc312\"\n        }\n    ],\n    \"courseId\": \"9c909e33-e846-d35a-411b-76e13a793bbe\",\n    \"id\": \"90da8a4d-77ba-cff2-ed6b-693119d6f123\",\n    \"name\": \"qui\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/chapters",
@@ -559,34 +559,6 @@
 									"body": ""
 								},
 								{
-									"name": "Created",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
 									"name": "Unauthorized",
 									"originalRequest": {
 										"method": "POST",
@@ -604,6 +576,34 @@
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/chapters",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"chapters"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -637,174 +637,6 @@
 										{
 											"key": "Content-Type",
 											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								}
-							]
-						},
-						{
-							"name": "updateChapter",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"contents\": [\n        \"9146d44c-b20f-d5ab-4cc6-91e90e1bfcc3\",\n        \"urn:uuid:dffa3245-959e-6bf7-7844-462c9f36cb3f\"\n    ],\n    \"courseId\": \"92a06d64-ff27-d491-e6d4-2fe741a55822\",\n    \"endDate\": \"2007-08-06\",\n    \"id\": \"urn:uuid:7107ac92-030b-0003-f00e-6f98f5af79a8\",\n    \"startDate\": \"1943-02-23\",\n    \"title\": \"in\"\n}"
-								},
-								"url": {
-									"raw": "{{baseUrl}}/api/chapters",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"chapters"
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "OK",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Not Found",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "Not Found",
-									"code": 404,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Unauthorized",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Created",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Forbidden",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "Forbidden",
-									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
 										}
 									],
 									"cookie": [],
@@ -824,7 +656,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"contents\": [\n        \"9146d44c-b20f-d5ab-4cc6-91e90e1bfcc3\",\n        \"urn:uuid:dffa3245-959e-6bf7-7844-462c9f36cb3f\"\n    ],\n    \"courseId\": \"92a06d64-ff27-d491-e6d4-2fe741a55822\",\n    \"endDate\": \"2007-08-06\",\n    \"id\": \"urn:uuid:7107ac92-030b-0003-f00e-6f98f5af79a8\",\n    \"startDate\": \"1943-02-23\",\n    \"title\": \"in\"\n}"
+									"raw": "{\n    \"chapterNumber\": -27074565,\n    \"contentReferences\": [\n        {\n            \"chapterId\": \"9f12a2cc-cf7d-ced4-f885-1e56c2d73462\",\n            \"contentId\": \"urn:uuid:c6832303-3204-9135-2abc-6380b8f72092\",\n            \"contentReferenceType\": \"QUIZ\",\n            \"id\": \"a4d44d13-c08d-16d9-d1b8-eb833780b31a\",\n            \"timePeriodId\": \"bda010fb-561f-5f8a-7661-1c7ad475886a\"\n        },\n        {\n            \"chapterId\": \"urn:uuid:d7f6b91a-ca31-91aa-9e25-35d0d56e2419\",\n            \"contentId\": \"58e6ccef-6ea5-a065-9274-ad07b0025094\",\n            \"contentReferenceType\": \"QUIZ\",\n            \"id\": \"078c6ec7-f430-a25d-3a60-22bdea66c696\",\n            \"timePeriodId\": \"4d47bd18-9c81-8054-30df-4a858bedc312\"\n        }\n    ],\n    \"courseId\": \"9c909e33-e846-d35a-411b-76e13a793bbe\",\n    \"id\": \"90da8a4d-77ba-cff2-ed6b-693119d6f123\",\n    \"name\": \"qui\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/chapters",
@@ -856,34 +688,6 @@
 									},
 									"status": "Forbidden",
 									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Unauthorized",
-									"originalRequest": {
-										"method": "PATCH",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/chapters",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"chapters"
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -949,6 +753,811 @@
 									],
 									"cookie": [],
 									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/chapters",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"chapters"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "contentreferences",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "getContentReference",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "deleteContentReference",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/contentreferences/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"contentreferences",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "getAllContentReferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/contentreferences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contentreferences"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "createContentReference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"e6484370-96d3-4937-474f-0a3b50a986c2\",\n    \"contentId\": \"9d5388a3-c0ea-25ec-0917-f02c7ed017c8\",\n    \"contentReferenceType\": \"QUIZ\",\n    \"id\": \"urn:uuid:c4203ee4-20bd-f8be-9fc0-42d5f1f64c3f\",\n    \"timePeriodId\": \"urn:uuid:1fe32478-c248-cc2e-4b76-4d8452705b51\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/contentreferences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contentreferences"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "patchContentReference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chapterId\": \"e6484370-96d3-4937-474f-0a3b50a986c2\",\n    \"contentId\": \"9d5388a3-c0ea-25ec-0917-f02c7ed017c8\",\n    \"contentReferenceType\": \"QUIZ\",\n    \"id\": \"urn:uuid:c4203ee4-20bd-f8be-9fc0-42d5f1f64c3f\",\n    \"timePeriodId\": \"urn:uuid:1fe32478-c248-cc2e-4b76-4d8452705b51\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/contentreferences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"contentreferences"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/contentreferences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"contentreferences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
 								}
 							]
 						}
@@ -978,7 +1587,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "8ec17fc6-1d8d-64e9-e2f0-3d2872c4e2fd",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
 													"type": "string",
 													"description": "(Required) id"
 												}
@@ -986,40 +1595,6 @@
 										}
 									},
 									"response": [
-										{
-											"name": "Forbidden",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/courses/:id",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"courses",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Forbidden",
-											"code": 403,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
 										{
 											"name": "Unauthorized",
 											"originalRequest": {
@@ -1044,6 +1619,40 @@
 											},
 											"status": "Unauthorized",
 											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/courses/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"courses",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -1142,7 +1751,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "8ec17fc6-1d8d-64e9-e2f0-3d2872c4e2fd",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
 													"type": "string",
 													"description": "(Required) id"
 												}
@@ -1150,6 +1759,40 @@
 										}
 									},
 									"response": [
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/courses/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"courses",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
 										{
 											"name": "OK",
 											"originalRequest": {
@@ -1174,6 +1817,40 @@
 											},
 											"status": "OK",
 											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/courses/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"courses",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -1217,74 +1894,6 @@
 											],
 											"cookie": [],
 											"body": ""
-										},
-										{
-											"name": "Forbidden",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/courses/:id",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"courses",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Forbidden",
-											"code": 403,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
-										{
-											"name": "Unauthorized",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/courses/:id",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"courses",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
 										}
 									]
 								},
@@ -1307,7 +1916,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "8ec17fc6-1d8d-64e9-e2f0-3d2872c4e2fd",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
 													"type": "string",
 													"description": "(Required) id"
 												}
@@ -1315,41 +1924,6 @@
 										}
 									},
 									"response": [
-										{
-											"name": "Forbidden",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/courses/:id/join",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"courses",
-														":id",
-														"join"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Forbidden",
-											"code": 403,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
 										{
 											"name": "OK",
 											"originalRequest": {
@@ -1386,41 +1960,6 @@
 											"body": ""
 										},
 										{
-											"name": "Unauthorized",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/courses/:id/join",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"courses",
-														":id",
-														"join"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
-										{
 											"name": "Not Found",
 											"originalRequest": {
 												"method": "POST",
@@ -1489,6 +2028,76 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/courses/:id/join",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"courses",
+														":id",
+														"join"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/courses/:id/join",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"courses",
+														":id",
+														"join"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
 										}
 									]
 								},
@@ -1511,7 +2120,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "8ec17fc6-1d8d-64e9-e2f0-3d2872c4e2fd",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
 													"type": "string",
 													"description": "(Required) id"
 												}
@@ -1555,6 +2164,41 @@
 											"body": ""
 										},
 										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/courses/:id/leave",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"courses",
+														":id",
+														"leave"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
 											"name": "Created",
 											"originalRequest": {
 												"method": "POST",
@@ -1614,41 +2258,6 @@
 											},
 											"status": "Unauthorized",
 											"code": 401,
-											"_postman_previewlanguage": "text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "text/plain"
-												}
-											],
-											"cookie": [],
-											"body": ""
-										},
-										{
-											"name": "Forbidden",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"url": {
-													"raw": "{{baseUrl}}/api/courses/:id/leave",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"courses",
-														":id",
-														"leave"
-													],
-													"variable": [
-														{
-															"key": "id"
-														}
-													]
-												}
-											},
-											"status": "Forbidden",
-											"code": 403,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -1704,7 +2313,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/courses?activeOnly=voluptate&publishState=voluptate",
+									"raw": "{{baseUrl}}/api/courses?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -1715,12 +2324,12 @@
 									"query": [
 										{
 											"key": "activeOnly",
-											"value": "voluptate",
+											"value": "est dolor ullamco",
 											"description": "activeOnly"
 										},
 										{
 											"key": "publishState",
-											"value": "voluptate",
+											"value": "est dolor ullamco",
 											"description": "publishState"
 										}
 									]
@@ -1728,88 +2337,12 @@
 							},
 							"response": [
 								{
-									"name": "Forbidden",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses?activeOnly=voluptate&publishState=voluptate",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											],
-											"query": [
-												{
-													"key": "activeOnly",
-													"value": "voluptate"
-												},
-												{
-													"key": "publishState",
-													"value": "voluptate"
-												}
-											]
-										}
-									},
-									"status": "Forbidden",
-									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "OK",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses?activeOnly=voluptate&publishState=voluptate",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											],
-											"query": [
-												{
-													"key": "activeOnly",
-													"value": "voluptate"
-												},
-												{
-													"key": "publishState",
-													"value": "voluptate"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
 									"name": "Not Found",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses?activeOnly=voluptate&publishState=voluptate",
+											"raw": "{{baseUrl}}/api/courses?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -1820,11 +2353,11 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												},
 												{
 													"key": "publishState",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												}
 											]
 										}
@@ -1847,7 +2380,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses?activeOnly=voluptate&publishState=voluptate",
+											"raw": "{{baseUrl}}/api/courses?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -1858,17 +2391,93 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												},
 												{
 													"key": "publishState",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												}
 											]
 										}
 									},
 									"status": "Unauthorized",
 									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/courses?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"courses"
+											],
+											"query": [
+												{
+													"key": "activeOnly",
+													"value": "est dolor ullamco"
+												},
+												{
+													"key": "publishState",
+													"value": "est dolor ullamco"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/courses?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"courses"
+											],
+											"query": [
+												{
+													"key": "activeOnly",
+													"value": "est dolor ullamco"
+												},
+												{
+													"key": "publishState",
+													"value": "est dolor ullamco"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -1893,7 +2502,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"chapters\": [\n        \"urn:uuid:d1850c84-c505-9126-fa1d-2773c22a1cf7\",\n        \"edb578af-d0a8-bf88-02ee-bcd6b66a5966\"\n    ],\n    \"courseDescription\": \"et aliquip reprehenderit adipisicing\",\n    \"courseRole\": \"MANAGER\",\n    \"endDate\": \"1988-04-11\",\n    \"id\": \"dbf85b01-c7e9-9d4c-7a53-9af5d33b9314\",\n    \"maxFoodSum\": -1813045,\n    \"name\": \"laboris Excepteur\",\n    \"publishState\": \"PUBLISHED\",\n    \"remainActiveOffset\": 34573730,\n    \"startDate\": \"1976-05-10\"\n}"
+									"raw": "{\n    \"chapters\": [\n        {\n            \"chapterNumber\": 98386740,\n            \"contentReferences\": [\n                {\n                    \"chapterId\": \"91337eed-22b5-5888-8101-edfc6bc21450\",\n                    \"contentId\": \"649d5e49-bf47-0112-68db-4796c50a89ee\",\n                    \"contentReferenceType\": \"VIDEO\",\n                    \"id\": \"6993f19a-db54-e29d-640a-cf4027f5d0db\",\n                    \"timePeriodId\": \"urn:uuid:b91164bd-a4e7-4e99-38bd-ebd4f892a70d\"\n                },\n                {\n                    \"chapterId\": \"urn:uuid:91af26d7-d9d5-cbdf-6e87-d9238334f745\",\n                    \"contentId\": \"urn:uuid:30dbb7c6-fba8-65b5-7b5e-a59ca0cd0724\",\n                    \"contentReferenceType\": \"VIDEO\",\n                    \"id\": \"urn:uuid:ee7f494b-8883-8743-58de-3cf6c839143f\",\n                    \"timePeriodId\": \"ad4163b8-0c47-ee62-8761-bfb79c5e961c\"\n                }\n            ],\n            \"courseId\": \"1239e585-9863-2f00-64bc-3b0a824ff0fb\",\n            \"id\": \"ffdcd23f-a57b-d33d-1ab3-64657e7fb17f\",\n            \"name\": \"occaecat deserunt ut esse\"\n        },\n        {\n            \"chapterNumber\": -67975389,\n            \"contentReferences\": [\n                {\n                    \"chapterId\": \"urn:uuid:fa4f05b9-50a7-c84e-d33a-6e3eecbf6a27\",\n                    \"contentId\": \"urn:uuid:1163718c-5f9c-3709-ffce-d81d8c491f07\",\n                    \"contentReferenceType\": \"VIDEO\",\n                    \"id\": \"urn:uuid:43db0e41-7fb3-6902-fd19-a4a005abc0e9\",\n                    \"timePeriodId\": \"a887374c-15f0-b133-83ee-32ecad470d63\"\n                },\n                {\n                    \"chapterId\": \"cc2fbdb2-3376-ccc4-c3c1-2c1064b6bd21\",\n                    \"contentId\": \"urn:uuid:ab1164e9-610a-2887-b185-9883e27130ce\",\n                    \"contentReferenceType\": \"QUIZ\",\n                    \"id\": \"urn:uuid:3d0971c5-0ea7-f182-b465-6a8bd72ab1ed\",\n                    \"timePeriodId\": \"9b87c95b-1da3-f5d2-4b2d-e29747b266fb\"\n                }\n            ],\n            \"courseId\": \"urn:uuid:fea475a0-6b1d-1c43-5880-666aabaf37d0\",\n            \"id\": \"urn:uuid:5d333889-72fe-cd83-a417-957871734630\",\n            \"name\": \"culpa Lorem\"\n        }\n    ],\n    \"courseDescription\": \"velit fugiat sed in pariatur\",\n    \"courseRole\": \"OWNER\",\n    \"endDate\": \"1975-09-22\",\n    \"id\": \"urn:uuid:89c3fb54-6840-3ad1-67fc-095d70af198b\",\n    \"maxFoodSum\": -40989734,\n    \"name\": \"laborum veniam laboris adip\",\n    \"publishState\": \"PUBLISHED\",\n    \"remainActiveOffset\": -46838591,\n    \"startDate\": \"2001-02-27\",\n    \"timePeriods\": [\n        {\n            \"contentReferenceIds\": [\n                \"f29238c4-3d1b-a9bc-a038-bedf03575adc\",\n                \"urn:uuid:1bb8b3c9-7ca2-eece-187c-2166d138d77d\"\n            ],\n            \"courseId\": \"urn:uuid:281ddc66-6eb7-56ec-b55a-06e6d83fed84\",\n            \"endDate\": \"1988-03-10\",\n            \"id\": \"urn:uuid:977f708c-bd45-834b-bc47-57f4326ec272\",\n            \"startDate\": \"2014-11-09\"\n        },\n        {\n            \"contentReferenceIds\": [\n                \"9221b3e8-58cd-d0b2-23b3-62f2bf4b73d2\",\n                \"urn:uuid:40f27e52-88c2-f85d-5665-e8a8c1d7c05d\"\n            ],\n            \"courseId\": \"3f29e990-af7e-249c-4069-4b5cbd20e6a5\",\n            \"endDate\": \"1974-12-28\",\n            \"id\": \"4710cfe0-1ddb-69c5-920c-e68ecc0f1a9f\",\n            \"startDate\": \"1947-05-29\"\n        }\n    ]\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/courses",
@@ -1936,7 +2545,7 @@
 									"body": ""
 								},
 								{
-									"name": "OK",
+									"name": "Unauthorized",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
@@ -1951,13 +2560,13 @@
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
+									"status": "Unauthorized",
+									"code": 401,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "*/*"
+											"value": "text/plain"
 										}
 									],
 									"cookie": [],
@@ -1981,34 +2590,6 @@
 									},
 									"status": "Forbidden",
 									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Unauthorized",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -2046,123 +2627,11 @@
 									],
 									"cookie": [],
 									"body": ""
-								}
-							]
-						},
-						{
-							"name": "updateCourse",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"chapters\": [\n        \"urn:uuid:d1850c84-c505-9126-fa1d-2773c22a1cf7\",\n        \"edb578af-d0a8-bf88-02ee-bcd6b66a5966\"\n    ],\n    \"courseDescription\": \"et aliquip reprehenderit adipisicing\",\n    \"courseRole\": \"MANAGER\",\n    \"endDate\": \"1988-04-11\",\n    \"id\": \"dbf85b01-c7e9-9d4c-7a53-9af5d33b9314\",\n    \"maxFoodSum\": -1813045,\n    \"name\": \"laboris Excepteur\",\n    \"publishState\": \"PUBLISHED\",\n    \"remainActiveOffset\": 34573730,\n    \"startDate\": \"1976-05-10\"\n}"
-								},
-								"url": {
-									"raw": "{{baseUrl}}/api/courses",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"courses"
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "Created",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Unauthorized",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Forbidden",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											]
-										}
-									},
-									"status": "Forbidden",
-									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
 								},
 								{
 									"name": "OK",
 									"originalRequest": {
-										"method": "PUT",
+										"method": "POST",
 										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/api/courses",
@@ -2182,34 +2651,6 @@
 										{
 											"key": "Content-Type",
 											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Not Found",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											]
-										}
-									},
-									"status": "Not Found",
-									"code": 404,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
 										}
 									],
 									"cookie": [],
@@ -2229,7 +2670,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"chapters\": [\n        \"urn:uuid:d1850c84-c505-9126-fa1d-2773c22a1cf7\",\n        \"edb578af-d0a8-bf88-02ee-bcd6b66a5966\"\n    ],\n    \"courseDescription\": \"et aliquip reprehenderit adipisicing\",\n    \"courseRole\": \"MANAGER\",\n    \"endDate\": \"1988-04-11\",\n    \"id\": \"dbf85b01-c7e9-9d4c-7a53-9af5d33b9314\",\n    \"maxFoodSum\": -1813045,\n    \"name\": \"laboris Excepteur\",\n    \"publishState\": \"PUBLISHED\",\n    \"remainActiveOffset\": 34573730,\n    \"startDate\": \"1976-05-10\"\n}"
+									"raw": "{\n    \"chapters\": [\n        {\n            \"chapterNumber\": 98386740,\n            \"contentReferences\": [\n                {\n                    \"chapterId\": \"91337eed-22b5-5888-8101-edfc6bc21450\",\n                    \"contentId\": \"649d5e49-bf47-0112-68db-4796c50a89ee\",\n                    \"contentReferenceType\": \"VIDEO\",\n                    \"id\": \"6993f19a-db54-e29d-640a-cf4027f5d0db\",\n                    \"timePeriodId\": \"urn:uuid:b91164bd-a4e7-4e99-38bd-ebd4f892a70d\"\n                },\n                {\n                    \"chapterId\": \"urn:uuid:91af26d7-d9d5-cbdf-6e87-d9238334f745\",\n                    \"contentId\": \"urn:uuid:30dbb7c6-fba8-65b5-7b5e-a59ca0cd0724\",\n                    \"contentReferenceType\": \"VIDEO\",\n                    \"id\": \"urn:uuid:ee7f494b-8883-8743-58de-3cf6c839143f\",\n                    \"timePeriodId\": \"ad4163b8-0c47-ee62-8761-bfb79c5e961c\"\n                }\n            ],\n            \"courseId\": \"1239e585-9863-2f00-64bc-3b0a824ff0fb\",\n            \"id\": \"ffdcd23f-a57b-d33d-1ab3-64657e7fb17f\",\n            \"name\": \"occaecat deserunt ut esse\"\n        },\n        {\n            \"chapterNumber\": -67975389,\n            \"contentReferences\": [\n                {\n                    \"chapterId\": \"urn:uuid:fa4f05b9-50a7-c84e-d33a-6e3eecbf6a27\",\n                    \"contentId\": \"urn:uuid:1163718c-5f9c-3709-ffce-d81d8c491f07\",\n                    \"contentReferenceType\": \"VIDEO\",\n                    \"id\": \"urn:uuid:43db0e41-7fb3-6902-fd19-a4a005abc0e9\",\n                    \"timePeriodId\": \"a887374c-15f0-b133-83ee-32ecad470d63\"\n                },\n                {\n                    \"chapterId\": \"cc2fbdb2-3376-ccc4-c3c1-2c1064b6bd21\",\n                    \"contentId\": \"urn:uuid:ab1164e9-610a-2887-b185-9883e27130ce\",\n                    \"contentReferenceType\": \"QUIZ\",\n                    \"id\": \"urn:uuid:3d0971c5-0ea7-f182-b465-6a8bd72ab1ed\",\n                    \"timePeriodId\": \"9b87c95b-1da3-f5d2-4b2d-e29747b266fb\"\n                }\n            ],\n            \"courseId\": \"urn:uuid:fea475a0-6b1d-1c43-5880-666aabaf37d0\",\n            \"id\": \"urn:uuid:5d333889-72fe-cd83-a417-957871734630\",\n            \"name\": \"culpa Lorem\"\n        }\n    ],\n    \"courseDescription\": \"velit fugiat sed in pariatur\",\n    \"courseRole\": \"OWNER\",\n    \"endDate\": \"1975-09-22\",\n    \"id\": \"urn:uuid:89c3fb54-6840-3ad1-67fc-095d70af198b\",\n    \"maxFoodSum\": -40989734,\n    \"name\": \"laborum veniam laboris adip\",\n    \"publishState\": \"PUBLISHED\",\n    \"remainActiveOffset\": -46838591,\n    \"startDate\": \"2001-02-27\",\n    \"timePeriods\": [\n        {\n            \"contentReferenceIds\": [\n                \"f29238c4-3d1b-a9bc-a038-bedf03575adc\",\n                \"urn:uuid:1bb8b3c9-7ca2-eece-187c-2166d138d77d\"\n            ],\n            \"courseId\": \"urn:uuid:281ddc66-6eb7-56ec-b55a-06e6d83fed84\",\n            \"endDate\": \"1988-03-10\",\n            \"id\": \"urn:uuid:977f708c-bd45-834b-bc47-57f4326ec272\",\n            \"startDate\": \"2014-11-09\"\n        },\n        {\n            \"contentReferenceIds\": [\n                \"9221b3e8-58cd-d0b2-23b3-62f2bf4b73d2\",\n                \"urn:uuid:40f27e52-88c2-f85d-5665-e8a8c1d7c05d\"\n            ],\n            \"courseId\": \"3f29e990-af7e-249c-4069-4b5cbd20e6a5\",\n            \"endDate\": \"1974-12-28\",\n            \"id\": \"4710cfe0-1ddb-69c5-920c-e68ecc0f1a9f\",\n            \"startDate\": \"1947-05-29\"\n        }\n    ]\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/courses",
@@ -2243,34 +2684,6 @@
 								}
 							},
 							"response": [
-								{
-									"name": "Forbidden",
-									"originalRequest": {
-										"method": "PATCH",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses"
-											]
-										}
-									},
-									"status": "Forbidden",
-									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
 								{
 									"name": "Unauthorized",
 									"originalRequest": {
@@ -2328,6 +2741,34 @@
 									"body": ""
 								},
 								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/courses",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"courses"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
 									"name": "OK",
 									"originalRequest": {
 										"method": "PATCH",
@@ -2363,7 +2804,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/courses/published?activeOnly=voluptate",
+									"raw": "{{baseUrl}}/api/courses/published?activeOnly=est dolor ullamco",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -2375,7 +2816,7 @@
 									"query": [
 										{
 											"key": "activeOnly",
-											"value": "voluptate",
+											"value": "est dolor ullamco",
 											"description": "activeOnly"
 										}
 									]
@@ -2383,47 +2824,12 @@
 							},
 							"response": [
 								{
-									"name": "Unauthorized",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses/published?activeOnly=voluptate",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses",
-												"published"
-											],
-											"query": [
-												{
-													"key": "activeOnly",
-													"value": "voluptate"
-												}
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
 									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses/published?activeOnly=voluptate",
+											"raw": "{{baseUrl}}/api/courses/published?activeOnly=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2435,7 +2841,7 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												}
 											]
 										}
@@ -2453,12 +2859,12 @@
 									"body": ""
 								},
 								{
-									"name": "Not Found",
+									"name": "Unauthorized",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses/published?activeOnly=voluptate",
+											"raw": "{{baseUrl}}/api/courses/published?activeOnly=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2470,13 +2876,13 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												}
 											]
 										}
 									},
-									"status": "Not Found",
-									"code": 404,
+									"status": "Unauthorized",
+									"code": 401,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -2493,7 +2899,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses/published?activeOnly=voluptate",
+											"raw": "{{baseUrl}}/api/courses/published?activeOnly=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2505,13 +2911,48 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												}
 											]
 										}
 									},
 									"status": "Forbidden",
 									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/courses/published?activeOnly=est dolor ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"courses",
+												"published"
+											],
+											"query": [
+												{
+													"key": "activeOnly",
+													"value": "est dolor ullamco"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -2530,7 +2971,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/courses/user?activeOnly=voluptate&publishState=voluptate",
+									"raw": "{{baseUrl}}/api/courses/user?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -2542,12 +2983,12 @@
 									"query": [
 										{
 											"key": "activeOnly",
-											"value": "voluptate",
+											"value": "est dolor ullamco",
 											"description": "activeOnly"
 										},
 										{
 											"key": "publishState",
-											"value": "voluptate",
+											"value": "est dolor ullamco",
 											"description": "publishState"
 										}
 									]
@@ -2555,90 +2996,12 @@
 							},
 							"response": [
 								{
-									"name": "OK",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses/user?activeOnly=voluptate&publishState=voluptate",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses",
-												"user"
-											],
-											"query": [
-												{
-													"key": "activeOnly",
-													"value": "voluptate"
-												},
-												{
-													"key": "publishState",
-													"value": "voluptate"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Unauthorized",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/courses/user?activeOnly=voluptate&publishState=voluptate",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"courses",
-												"user"
-											],
-											"query": [
-												{
-													"key": "activeOnly",
-													"value": "voluptate"
-												},
-												{
-													"key": "publishState",
-													"value": "voluptate"
-												}
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
 									"name": "Not Found",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses/user?activeOnly=voluptate&publishState=voluptate",
+											"raw": "{{baseUrl}}/api/courses/user?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2650,11 +3013,11 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												},
 												{
 													"key": "publishState",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												}
 											]
 										}
@@ -2672,12 +3035,12 @@
 									"body": ""
 								},
 								{
-									"name": "Forbidden",
+									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/api/courses/user?activeOnly=voluptate&publishState=voluptate",
+											"raw": "{{baseUrl}}/api/courses/user?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2689,17 +3052,2117 @@
 											"query": [
 												{
 													"key": "activeOnly",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
 												},
 												{
 													"key": "publishState",
-													"value": "voluptate"
+													"value": "est dolor ullamco"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/courses/user?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"courses",
+												"user"
+											],
+											"query": [
+												{
+													"key": "activeOnly",
+													"value": "est dolor ullamco"
+												},
+												{
+													"key": "publishState",
+													"value": "est dolor ullamco"
 												}
 											]
 										}
 									},
 									"status": "Forbidden",
 									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/courses/user?activeOnly=est dolor ullamco&publishState=est dolor ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"courses",
+												"user"
+											],
+											"query": [
+												{
+													"key": "activeOnly",
+													"value": "est dolor ullamco"
+												},
+												{
+													"key": "publishState",
+													"value": "est dolor ullamco"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "progress",
+					"item": [
+						{
+							"name": "content",
+							"item": [
+								{
+									"name": "{tracker Id}",
+									"item": [
+										{
+											"name": "getContentProgress",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content/:trackerId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content",
+														":trackerId"
+													],
+													"variable": [
+														{
+															"key": "trackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+															"type": "string",
+															"description": "(Required) trackerId"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "setContentStateComplete",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content/:trackerId/complete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content",
+														":trackerId",
+														"complete"
+													],
+													"variable": [
+														{
+															"key": "trackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+															"type": "string",
+															"description": "(Required) trackerId"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"complete"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"complete"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"complete"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"complete"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"complete"
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "updateContentProgress",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content/:trackerId/progress?progress=-28812255.836136818",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content",
+														":trackerId",
+														"progress"
+													],
+													"query": [
+														{
+															"key": "progress",
+															"value": "-28812255.836136818",
+															"description": "(Required) progress"
+														}
+													],
+													"variable": [
+														{
+															"key": "trackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+															"type": "string",
+															"description": "(Required) trackerId"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/progress?progress=-28812255.836136818",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"progress"
+															],
+															"query": [
+																{
+																	"key": "progress",
+																	"value": "-28812255.836136818"
+																}
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/progress?progress=-28812255.836136818",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"progress"
+															],
+															"query": [
+																{
+																	"key": "progress",
+																	"value": "-28812255.836136818"
+																}
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/progress?progress=-28812255.836136818",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"progress"
+															],
+															"query": [
+																{
+																	"key": "progress",
+																	"value": "-28812255.836136818"
+																}
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/progress?progress=-28812255.836136818",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"progress"
+															],
+															"query": [
+																{
+																	"key": "progress",
+																	"value": "-28812255.836136818"
+																}
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/progress/content/:trackerId/progress?progress=-28812255.836136818",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"progress",
+																"content",
+																":trackerId",
+																"progress"
+															],
+															"query": [
+																{
+																	"key": "progress",
+																	"value": "-28812255.836136818"
+																}
+															],
+															"variable": [
+																{
+																	"key": "trackerId"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "createContentProgress",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"chapterId\": \"e6484370-96d3-4937-474f-0a3b50a986c2\",\n    \"contentId\": \"9d5388a3-c0ea-25ec-0917-f02c7ed017c8\",\n    \"contentReferenceType\": \"QUIZ\",\n    \"id\": \"urn:uuid:c4203ee4-20bd-f8be-9fc0-42d5f1f64c3f\",\n    \"timePeriodId\": \"urn:uuid:1fe32478-c248-cc2e-4b76-4d8452705b51\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/progress/content?courseTrackerId=urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"progress",
+												"content"
+											],
+											"query": [
+												{
+													"key": "courseTrackerId",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"description": "(Required) courseTrackerId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content?courseTrackerId=urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content"
+													],
+													"query": [
+														{
+															"key": "courseTrackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content?courseTrackerId=urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content"
+													],
+													"query": [
+														{
+															"key": "courseTrackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content?courseTrackerId=urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content"
+													],
+													"query": [
+														{
+															"key": "courseTrackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content?courseTrackerId=urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content"
+													],
+													"query": [
+														{
+															"key": "courseTrackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/content?courseTrackerId=urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"content"
+													],
+													"query": [
+														{
+															"key": "courseTrackerId",
+															"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "courses",
+							"item": [
+								{
+									"name": "getCourseProgress",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/progress/courses/:courseId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"progress",
+												"courses",
+												":courseId"
+											],
+											"variable": [
+												{
+													"key": "courseId",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"type": "string",
+													"description": "(Required) courseId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseId"
+													],
+													"variable": [
+														{
+															"key": "courseId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseId"
+													],
+													"variable": [
+														{
+															"key": "courseId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseId"
+													],
+													"variable": [
+														{
+															"key": "courseId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseId"
+													],
+													"variable": [
+														{
+															"key": "courseId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "updateLastAccessedContentReference",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"chapterId\": \"e6484370-96d3-4937-474f-0a3b50a986c2\",\n    \"contentId\": \"9d5388a3-c0ea-25ec-0917-f02c7ed017c8\",\n    \"contentReferenceType\": \"QUIZ\",\n    \"id\": \"urn:uuid:c4203ee4-20bd-f8be-9fc0-42d5f1f64c3f\",\n    \"timePeriodId\": \"urn:uuid:1fe32478-c248-cc2e-4b76-4d8452705b51\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/progress/courses/:courseTrackerId/contentReference",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"progress",
+												"courses",
+												":courseTrackerId",
+												"contentReference"
+											],
+											"variable": [
+												{
+													"key": "courseTrackerId",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"type": "string",
+													"description": "(Required) courseTrackerId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseTrackerId/contentReference",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseTrackerId",
+														"contentReference"
+													],
+													"variable": [
+														{
+															"key": "courseTrackerId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseTrackerId/contentReference",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseTrackerId",
+														"contentReference"
+													],
+													"variable": [
+														{
+															"key": "courseTrackerId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseTrackerId/contentReference",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseTrackerId",
+														"contentReference"
+													],
+													"variable": [
+														{
+															"key": "courseTrackerId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseTrackerId/contentReference",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseTrackerId",
+														"contentReference"
+													],
+													"variable": [
+														{
+															"key": "courseTrackerId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/progress/courses/:courseTrackerId/contentReference",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"progress",
+														"courses",
+														":courseTrackerId",
+														"contentReference"
+													],
+													"variable": [
+														{
+															"key": "courseTrackerId"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "timeperiods",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "getTimePeriod",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "deleteTimePeriod",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:b615effd-c8b6-2931-e9d6-2a4c5435dd80",
+													"type": "string",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/timeperiods/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"timeperiods",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "getAllTimePeriods",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/timeperiods",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"timeperiods"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "createTimePeriod",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"contentReferenceIds\": [\n        \"92073ca5-b797-d774-7284-ec2f587db49b\",\n        \"urn:uuid:3a9d8c5a-0f1b-1209-bfbf-4e02e193c4ca\"\n    ],\n    \"courseId\": \"urn:uuid:e53a9928-64c3-8b50-dd3c-ec63da6261a6\",\n    \"endDate\": \"1969-12-07\",\n    \"id\": \"3fbe2724-de5c-dce7-1888-95686822494a\",\n    \"startDate\": \"2002-11-27\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/timeperiods",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"timeperiods"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "patchTimePeriod",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"contentReferenceIds\": [\n        \"92073ca5-b797-d774-7284-ec2f587db49b\",\n        \"urn:uuid:3a9d8c5a-0f1b-1209-bfbf-4e02e193c4ca\"\n    ],\n    \"courseId\": \"urn:uuid:e53a9928-64c3-8b50-dd3c-ec63da6261a6\",\n    \"endDate\": \"1969-12-07\",\n    \"id\": \"3fbe2724-de5c-dce7-1888-95686822494a\",\n    \"startDate\": \"2002-11-27\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/timeperiods",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"timeperiods"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/timeperiods",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"timeperiods"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -2732,7 +5195,7 @@
 					},
 					"response": [
 						{
-							"name": "Not Found",
+							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -2747,8 +5210,8 @@
 									]
 								}
 							},
-							"status": "Not Found",
-							"code": 404,
+							"status": "Forbidden",
+							"code": 403,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
@@ -2816,7 +5279,7 @@
 							"body": ""
 						},
 						{
-							"name": "Forbidden",
+							"name": "Not Found",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -2831,8 +5294,8 @@
 									]
 								}
 							},
-							"status": "Forbidden",
-							"code": 403,
+							"status": "Not Found",
+							"code": 404,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
