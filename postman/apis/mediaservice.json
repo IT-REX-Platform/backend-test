@@ -67,46 +67,6 @@
             }
         },
         "/api/videos": {
-            "get": {
-                "tags": [
-                    "video-resource"
-                ],
-                "summary": "getAllVideos",
-                "operationId": "getAllVideosUsingGET",
-                "produces": [
-                    "*/*"
-                ],
-                "parameters": [
-                    {
-                        "name": "course_id",
-                        "in": "query",
-                        "description": "course_id",
-                        "required": false,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/Video"
-                            }
-                        }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                },
-                "deprecated": false
-            },
             "post": {
                 "tags": [
                     "video-resource"
@@ -208,7 +168,50 @@
                 "deprecated": false
             }
         },
-        "/api/videos/{id}": {
+        "/api/videos/course/{courseId}": {
+            "get": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "findAllVideosOfACourse",
+                "operationId": "findAllVideosOfACourseUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "courseId",
+                        "in": "path",
+                        "description": "courseId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Video"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/videos/download/{id}": {
             "get": {
                 "tags": [
                     "video-resource"
@@ -246,7 +249,63 @@
                     }
                 },
                 "deprecated": false
-            },
+            }
+        },
+        "/api/videos/get/ids": {
+            "post": {
+                "tags": [
+                    "video-resource"
+                ],
+                "summary": "findAllWithIds",
+                "operationId": "findAllWithIdsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "videoIds",
+                        "description": "videoIds",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/Video"
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/videos/{id}": {
             "delete": {
                 "tags": [
                     "video-resource"

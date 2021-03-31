@@ -17,8 +17,20 @@
             "description": "Chapter Resource"
         },
         {
+            "name": "content-reference-resource",
+            "description": "Content Reference Resource"
+        },
+        {
             "name": "course-resource",
             "description": "Course Resource"
+        },
+        {
+            "name": "progress-resource",
+            "description": "Progress Resource"
+        },
+        {
+            "name": "time-period-resource",
+            "description": "Time Period Resource"
         },
         {
             "name": "user-info-resource",
@@ -64,51 +76,6 @@
                 ],
                 "summary": "createChapter",
                 "operationId": "createChapterUsingPOST",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "*/*"
-                ],
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "chapterDTO",
-                        "description": "chapterDTO",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/ChapterDTO"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/ChapterDTO"
-                        }
-                    },
-                    "201": {
-                        "description": "Created"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                },
-                "deprecated": false
-            },
-            "put": {
-                "tags": [
-                    "chapter-resource"
-                ],
-                "summary": "updateChapter",
-                "operationId": "updateChapterUsingPUT",
                 "consumes": [
                     "application/json"
                 ],
@@ -266,6 +233,201 @@
                 "deprecated": false
             }
         },
+        "/api/contentreferences": {
+            "get": {
+                "tags": [
+                    "content-reference-resource"
+                ],
+                "summary": "getAllContentReferences",
+                "operationId": "getAllContentReferencesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ContentReferenceDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "content-reference-resource"
+                ],
+                "summary": "createContentReference",
+                "operationId": "createContentReferenceUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "contentReferenceDTO",
+                        "description": "contentReferenceDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "content-reference-resource"
+                ],
+                "summary": "patchContentReference",
+                "operationId": "patchContentReferenceUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "contentReferenceDTO",
+                        "description": "contentReferenceDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/contentreferences/{id}": {
+            "get": {
+                "tags": [
+                    "content-reference-resource"
+                ],
+                "summary": "getContentReference",
+                "operationId": "getContentReferenceUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "content-reference-resource"
+                ],
+                "summary": "deleteContentReference",
+                "operationId": "deleteContentReferenceUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
         "/api/courses": {
             "get": {
                 "tags": [
@@ -320,51 +482,6 @@
                 ],
                 "summary": "createCourse",
                 "operationId": "createCourseUsingPOST",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "*/*"
-                ],
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "courseDTO",
-                        "description": "courseDTO",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/CourseDTO"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/CourseDTO"
-                        }
-                    },
-                    "201": {
-                        "description": "Created"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                },
-                "deprecated": false
-            },
-            "put": {
-                "tags": [
-                    "course-resource"
-                ],
-                "summary": "updateCourse",
-                "operationId": "updateCourseUsingPUT",
                 "consumes": [
                     "application/json"
                 ],
@@ -699,6 +816,491 @@
                 "deprecated": false
             }
         },
+        "/api/progress/content": {
+            "post": {
+                "tags": [
+                    "progress-resource"
+                ],
+                "summary": "createContentProgress",
+                "operationId": "createContentProgressUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "contentReferenceDTO",
+                        "description": "contentReferenceDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    },
+                    {
+                        "name": "courseTrackerId",
+                        "in": "query",
+                        "description": "courseTrackerId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentProgressTrackerDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/progress/content/{trackerId}": {
+            "get": {
+                "tags": [
+                    "progress-resource"
+                ],
+                "summary": "getContentProgress",
+                "operationId": "getContentProgressUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "trackerId",
+                        "in": "path",
+                        "description": "trackerId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentProgressTrackerDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/progress/content/{trackerId}/complete": {
+            "put": {
+                "tags": [
+                    "progress-resource"
+                ],
+                "summary": "setContentStateComplete",
+                "operationId": "setContentStateCompleteUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "trackerId",
+                        "in": "path",
+                        "description": "trackerId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentProgressTrackerDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/progress/content/{trackerId}/progress": {
+            "put": {
+                "tags": [
+                    "progress-resource"
+                ],
+                "summary": "updateContentProgress",
+                "operationId": "updateContentProgressUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "progress",
+                        "in": "query",
+                        "description": "progress",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    },
+                    {
+                        "name": "trackerId",
+                        "in": "path",
+                        "description": "trackerId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContentProgressTrackerDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/progress/courses/{courseId}": {
+            "get": {
+                "tags": [
+                    "progress-resource"
+                ],
+                "summary": "getCourseProgress",
+                "operationId": "getCourseProgressUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "courseId",
+                        "in": "path",
+                        "description": "courseId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CourseProgressTrackerDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/progress/courses/{courseTrackerId}/contentReference": {
+            "put": {
+                "tags": [
+                    "progress-resource"
+                ],
+                "summary": "updateLastAccessedContentReference",
+                "operationId": "updateLastAccessedContentReferenceUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "contentReferenceDTO",
+                        "description": "contentReferenceDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContentReferenceDTO"
+                        }
+                    },
+                    {
+                        "name": "courseTrackerId",
+                        "in": "path",
+                        "description": "courseTrackerId",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CourseProgressTrackerDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/timeperiods": {
+            "get": {
+                "tags": [
+                    "time-period-resource"
+                ],
+                "summary": "getAllTimePeriods",
+                "operationId": "getAllTimePeriodsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/TimePeriodDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "time-period-resource"
+                ],
+                "summary": "createTimePeriod",
+                "operationId": "createTimePeriodUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "timePeriodDTO",
+                        "description": "timePeriodDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TimePeriodDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/TimePeriodDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "time-period-resource"
+                ],
+                "summary": "patchTimePeriod",
+                "operationId": "patchTimePeriodUsingPATCH",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "timePeriodDTO",
+                        "description": "timePeriodDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TimePeriodDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/TimePeriodDTO"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/timeperiods/{id}": {
+            "get": {
+                "tags": [
+                    "time-period-resource"
+                ],
+                "summary": "getTimePeriod",
+                "operationId": "getTimePeriodUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/TimePeriodDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "time-period-resource"
+                ],
+                "summary": "deleteTimePeriod",
+                "operationId": "deleteTimePeriodUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
         "/api/user-info": {
             "get": {
                 "tags": [
@@ -734,34 +1336,82 @@
         "ChapterDTO": {
             "type": "object",
             "properties": {
-                "contents": {
+                "chapterNumber": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "contentReferences": {
                     "type": "array",
                     "items": {
-                        "type": "string",
-                        "format": "uuid"
+                        "$ref": "#/definitions/ContentReferenceDTO"
                     }
                 },
                 "courseId": {
                     "type": "string",
                     "format": "uuid"
                 },
-                "endDate": {
+                "id": {
                     "type": "string",
-                    "format": "date"
+                    "format": "uuid"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "title": "ChapterDTO"
+        },
+        "ContentProgressTrackerDTO": {
+            "type": "object",
+            "properties": {
+                "contentReference": {
+                    "$ref": "#/definitions/ContentReferenceDTO"
                 },
                 "id": {
                     "type": "string",
                     "format": "uuid"
                 },
-                "startDate": {
-                    "type": "string",
-                    "format": "date"
+                "progress": {
+                    "type": "number",
+                    "format": "float"
                 },
-                "title": {
-                    "type": "string"
+                "state": {
+                    "type": "string",
+                    "enum": [
+                        "STARTED",
+                        "COMPLETED"
+                    ]
                 }
             },
-            "title": "ChapterDTO"
+            "title": "ContentProgressTrackerDTO"
+        },
+        "ContentReferenceDTO": {
+            "type": "object",
+            "properties": {
+                "chapterId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "contentId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "contentReferenceType": {
+                    "type": "string",
+                    "enum": [
+                        "QUIZ",
+                        "VIDEO"
+                    ]
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "timePeriodId": {
+                    "type": "string",
+                    "format": "uuid"
+                }
+            },
+            "title": "ContentReferenceDTO"
         },
         "CourseDTO": {
             "type": "object",
@@ -769,8 +1419,7 @@
                 "chapters": {
                     "type": "array",
                     "items": {
-                        "type": "string",
-                        "format": "uuid"
+                        "$ref": "#/definitions/ChapterDTO"
                     }
                 },
                 "courseDescription": {
@@ -813,9 +1462,79 @@
                 "startDate": {
                     "type": "string",
                     "format": "date"
+                },
+                "timePeriods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TimePeriodDTO"
+                    }
                 }
             },
             "title": "CourseDTO"
+        },
+        "CourseProgressTrackerDTO": {
+            "type": "object",
+            "properties": {
+                "contentProgressTrackers": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/ContentProgressTrackerDTO"
+                    }
+                },
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "lastContentReference": {
+                    "$ref": "#/definitions/OptionalOfContentReferenceDTO"
+                }
+            },
+            "title": "CourseProgressTrackerDTO"
+        },
+        "OptionalOfContentReferenceDTO": {
+            "type": "object",
+            "properties": {
+                "empty": {
+                    "type": "boolean"
+                },
+                "present": {
+                    "type": "boolean"
+                }
+            },
+            "title": "OptionalOfContentReferenceDTO"
+        },
+        "TimePeriodDTO": {
+            "type": "object",
+            "properties": {
+                "contentReferenceIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "title": "TimePeriodDTO"
         },
         "UserDTO": {
             "type": "object",

@@ -1,0 +1,718 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "QuizService API documentation",
+        "version": "0.0.1",
+        "title": "QuizService API",
+        "contact": {},
+        "license": {
+            "name": "unlicensed"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/services/quizservice",
+    "tags": [
+        {
+            "name": "question-resource",
+            "description": "Question Resource"
+        },
+        {
+            "name": "quiz-resource",
+            "description": "Quiz Resource"
+        }
+    ],
+    "paths": {
+        "/api/questions": {
+            "get": {
+                "tags": [
+                    "question-resource"
+                ],
+                "summary": "getCourseQuestions",
+                "operationId": "getCourseQuestionsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "description": "course_id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/QuestionDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "question-resource"
+                ],
+                "summary": "createQuestion",
+                "operationId": "createQuestionUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "questionDTO",
+                        "description": "questionDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QuestionDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/QuestionDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "question-resource"
+                ],
+                "summary": "updateQuestion",
+                "operationId": "updateQuestionUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "questionDTO",
+                        "description": "questionDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QuestionDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/QuestionDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/questions/get/ids": {
+            "post": {
+                "tags": [
+                    "question-resource"
+                ],
+                "summary": "findAllByIds",
+                "operationId": "findAllByIdsUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "questionIds",
+                        "description": "questionIds",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/QuestionDTO"
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/questions/{id}": {
+            "get": {
+                "tags": [
+                    "question-resource"
+                ],
+                "summary": "getQuestion",
+                "operationId": "getQuestionUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/QuestionDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "question-resource"
+                ],
+                "summary": "deleteQuestion",
+                "operationId": "deleteQuestionUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/quizzes": {
+            "get": {
+                "tags": [
+                    "quiz-resource"
+                ],
+                "summary": "getAllQuizzes",
+                "operationId": "getAllQuizzesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/QuizDTO"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "quiz-resource"
+                ],
+                "summary": "createQuiz",
+                "operationId": "createQuizUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "quizDTO",
+                        "description": "quizDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QuizDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/QuizDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "quiz-resource"
+                ],
+                "summary": "updateQuiz",
+                "operationId": "updateQuizUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "quizDTO",
+                        "description": "quizDTO",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QuizDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/QuizDTO"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/quizzes/get/ids": {
+            "post": {
+                "tags": [
+                    "quiz-resource"
+                ],
+                "summary": "findAllByIds",
+                "operationId": "findAllByIdsUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "quizIds",
+                        "description": "quizIds",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/QuizDTO"
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/quizzes/{id}": {
+            "get": {
+                "tags": [
+                    "quiz-resource"
+                ],
+                "summary": "getQuiz",
+                "operationId": "getQuizUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/QuizDTO"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "quiz-resource"
+                ],
+                "summary": "deleteQuiz",
+                "operationId": "deleteQuizUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    {
+                        "name": "with_questions",
+                        "in": "query",
+                        "description": "with_questions",
+                        "required": false,
+                        "type": "boolean",
+                        "default": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "QuestionDTO": {
+            "type": "object",
+            "discriminator": "type",
+            "properties": {
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "question": {
+                    "type": "string"
+                },
+                "quizIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                }
+            },
+            "title": "QuestionDTO"
+        },
+        "QuestionMultipleChoiceDTO": {
+            "title": "QuestionMultipleChoiceDTO",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QuestionDTO"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "choices": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "courseId": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "id": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "question": {
+                            "type": "string"
+                        },
+                        "quizIds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid"
+                            }
+                        },
+                        "solution": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "title": "QuestionMultipleChoiceDTO"
+                }
+            ]
+        },
+        "QuestionNumericDTO": {
+            "title": "QuestionNumericDTO",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QuestionDTO"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "courseId": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "id": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "question": {
+                            "type": "string"
+                        },
+                        "quizIds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid"
+                            }
+                        },
+                        "solution": {
+                            "$ref": "#/definitions/SolutionNumericDTO"
+                        }
+                    },
+                    "title": "QuestionNumericDTO"
+                }
+            ]
+        },
+        "QuestionSingleChoiceDTO": {
+            "title": "QuestionSingleChoiceDTO",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QuestionDTO"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "choices": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "courseId": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "id": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "question": {
+                            "type": "string"
+                        },
+                        "quizIds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid"
+                            }
+                        },
+                        "solution": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "title": "QuestionSingleChoiceDTO"
+                }
+            ]
+        },
+        "QuizDTO": {
+            "type": "object",
+            "properties": {
+                "courseId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "questions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/QuestionDTO"
+                    }
+                }
+            },
+            "title": "QuizDTO"
+        }
+    }
+}
